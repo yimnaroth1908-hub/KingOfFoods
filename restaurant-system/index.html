@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>System Sell | Restaurant</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+  <link rel="stylesheet" href="css/style-new.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+
+        <div class="logo">
+            <span class="logo-icon">S</span>
+            <span>System Sell</span>
+        </div>
+
+        <button class="table-btn">
+            Table 05
+        </button>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="welcome">
+                WELCOME TO SYSTEM SELL
+            </p>
+
+            <h1>
+                Good food.<br>
+                <span>Good mood.</span>
+            </h1>
+
+            <p class="hero-text">
+                Fresh flavors, made with love.
+                Choose your favorite and enjoy.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SEARCH ================= -->
+    <section class="search-section">
+
+        <div class="search-box">
+
+            <span>⌕</span>
+
+            <input
+                type="text"
+                placeholder="Search for food..."
+                id="searchInput"
+            >
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES ================= -->
+    <section class="categories">
+
+        <button class="category active">
+            All
+        </button>
+
+        <button class="category">
+            🍔 Burgers
+        </button>
+
+        <button class="category">
+            🍜 Noodles
+        </button>
+
+        <button class="category">
+            🍗 Chicken
+        </button>
+
+        <button class="category">
+            🥤 Drinks
+        </button>
+
+        <button class="category">
+            🍰 Dessert
+        </button>
+
+    </section>
+
+
+    <!-- ================= POPULAR ================= -->
+    <main class="container">
+
+        <div class="section-title">
+
+            <div>
+
+                <p class="small-title">
+                    WHAT'S POPULAR
+                </p>
+
+                <h2>
+                    Popular dishes
+                </h2>
+
+            </div>
+
+            <a href="menu.html">
+                View all →
+            </a>
+
+        </div>
+
+
+        <!-- ================= FOOD GRID ================= -->
+        <!-- Food will be loaded from MySQL using app.js -->
+        <div class="food-grid" id="foodGrid">
+
+            <!-- MySQL food items will appear here -->
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= CART BAR ================= -->
+    <div class="cart-bar">
+
+        <div class="cart-info">
+
+            <span class="cart-icon">
+                🛒
+            </span>
+
+            <div>
+
+                <small>
+                    Your order
+                </small>
+
+                <strong id="cartCount">
+                    0 items
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="cart-right">
+
+            <strong id="cartTotal">
+                $0.00
+            </strong>
+
+            <button>
+                View Cart →
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= CART OVERLAY ================= -->
+    <div
+        class="cart-overlay"
+        id="cartOverlay">
+    </div>
+
+
+    <!-- ================= CART DRAWER ================= -->
+    <div
+        class="cart-drawer"
+        id="cartDrawer">
+
+        <div class="cart-header">
+
+            <div>
+
+                <p class="cart-label">
+                    YOUR ORDER
+                </p>
+
+                <h2>
+                    Your Cart
+                </h2>
+
+            </div>
+
+
+            <button
+                class="close-cart"
+                id="closeCart">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <!-- Cart Items -->
+        <div
+            class="cart-items"
+            id="cartItems">
+
+            <!-- Cart items will appear here -->
+
+        </div>
+
+
+        <!-- Cart Summary -->
+        <div class="cart-summary">
+
+            <div class="summary-row">
+
+                <span>
+                    Subtotal
+                </span>
+
+                <strong id="drawerSubtotal">
+                    $0.00
+                </strong>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>
+                    Service fee
+                </span>
+
+                <strong>
+                    $0.00
+                </strong>
+
+            </div>
+
+
+            <div class="summary-total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="drawerTotal">
+                    $0.00
+                </strong>
+
+            </div>
+
+
+            <button
+                class="place-order-btn"
+                id="placeOrderBtn">
+
+                Place Order →
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= ORDER SUCCESS ================= -->
+    <div
+        class="order-overlay"
+        id="orderOverlay">
+
+        <div class="order-success">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+
+            <p class="order-small">
+                ORDER CONFIRMED
+            </p>
+
+
+            <h2>
+                Thank You! 🎉
+            </h2>
+
+
+            <p class="order-message">
+                Your order has been sent to the kitchen.
+            </p>
+
+
+            <!-- Order Number -->
+            <div class="order-number">
+
+                <span>
+                    Order Number
+                </span>
+
+                <strong id="orderNumber">
+                    SS-0001
+                </strong>
+
+            </div>
+
+
+            <!-- Order Information -->
+            <div class="order-info">
+
+                <div>
+
+                    <span>
+                        Table
+                    </span>
+
+                    <strong>
+                        05
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Status
+                    </span>
+
+                    <strong class="status-preparing">
+                        Preparing 🍳
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- Total -->
+            <div class="order-total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="successTotal">
+                    $0.00
+                </strong>
+
+            </div>
+
+
+            <!-- Track Order -->
+            <button
+                class="track-order-btn"
+                id="trackOrderBtn">
+
+                Track My Order →
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script src="js/app.js"></script>
+
+</body>
+</html>

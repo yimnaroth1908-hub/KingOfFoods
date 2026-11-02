@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kitchen Dashboard | System Sell</title>
+
+    <link rel="stylesheet" href="css/kitchen.css">
+</head>
+
+<body>
+    
+
+    <!-- HEADER -->
+    <header class="kitchen-header">
+
+        <div class="brand">
+            <div class="brand-icon">S</div>
+
+            <div>
+                <h1>System Sell</h1>
+                <span>Kitchen Dashboard</span>
+            </div>
+        </div>
+
+        <div class="header-right">
+
+            <div class="online-status">
+                <span class="online-dot"></span>
+                Kitchen Online
+            </div>
+
+            <div class="current-time" id="currentTime">
+                00:00
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="kitchen-container">
+
+        <!-- PAGE TITLE -->
+        <section class="page-heading">
+
+            <div>
+                <p class="eyebrow">SYSTEM SELL</p>
+                <h2>Kitchen Orders</h2>
+                <p class="heading-description">
+                    Manage incoming orders and keep everything moving smoothly.
+                </p>
+            </div>
+
+            <div class="live-indicator">
+                <span></span>
+                Live Orders
+            </div>
+
+        </section>
+
+
+        <!-- STATS -->
+        <section class="stats-grid">
+
+            <div class="stat-card new-stat">
+
+                <div class="stat-icon">
+                    🛎️
+                </div>
+
+                <div class="stat-content">
+                    <span>New Orders</span>
+                    <strong id="newCount">2</strong>
+                </div>
+
+                <div class="stat-arrow">
+                    →
+                </div>
+
+            </div>
+
+
+            <div class="stat-card preparing-stat">
+
+                <div class="stat-icon">
+                    🔥
+                </div>
+
+                <div class="stat-content">
+                    <span>Preparing</span>
+                    <strong id="preparingCount">1</strong>
+                </div>
+
+                <div class="stat-arrow">
+                    →
+                </div>
+
+            </div>
+
+
+            <div class="stat-card ready-stat">
+
+                <div class="stat-icon">
+                    ✓
+                </div>
+
+                <div class="stat-content">
+                    <span>Ready</span>
+                    <strong id="readyCount">1</strong>
+                </div>
+
+                <div class="stat-arrow">
+                    →
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FILTER -->
+        <section class="orders-section">
+
+            <div class="orders-top">
+
+                <div>
+                    <h3>Orders</h3>
+                    <p>Keep track of every kitchen order.</p>
+                </div>
+
+                <div class="filter-buttons">
+
+                    <button class="filter-btn active">
+                        All Orders
+                    </button>
+
+                    <button class="filter-btn">
+                        New
+                    </button>
+
+                    <button class="filter-btn">
+                        Preparing
+                    </button>
+
+                    <button class="filter-btn">
+                        Ready
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ORDERS -->
+            <div class="orders-grid">
+
+
+                <!-- ORDER 1 -->
+                <article class="order-card new-order">
+
+                    <div class="order-top">
+
+                        <div>
+                            <span class="order-label">ORDER</span>
+                            <h4>#SS-4821</h4>
+                        </div>
+
+                        <span class="order-status new">
+                            NEW ORDER
+                        </span>
+
+                    </div>
+
+
+                    <div class="order-meta">
+
+                        <span>
+                            🪑 Table 05
+                        </span>
+
+                        <span>
+                            •
+                        </span>
+
+                        <span class="order-time">
+                            Just now
+                        </span>
+
+                    </div>
+
+
+                    <div class="order-divider"></div>
+
+
+                    <div class="order-items">
+
+                        <div class="order-item">
+                            <div class="item-left">
+                                <span class="quantity">2×</span>
+                                <span>Classic Burger</span>
+                            </div>
+
+                            <strong>$9.00</strong>
+                        </div>
+
+
+                        <div class="order-item">
+                            <div class="item-left">
+                                <span class="quantity">1×</span>
+                                <span>Iced Coffee</span>
+                            </div>
+
+                            <strong>$2.50</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="order-divider"></div>
+
+
+                    <div class="order-bottom">
+
+                        <div>
+                            <span>Total</span>
+                            <strong>$11.50</strong>
+                        </div>
+
+                        <button
+                            class="order-action accept-btn"
+                            onclick="acceptOrder(this)"
+                        >
+                            Accept Order
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ORDER 2 -->
+                <article class="order-card new-order">
+
+                    <div class="order-top">
+
+                        <div>
+                            <span class="order-label">ORDER</span>
+                            <h4>#SS-3912</h4>
+                        </div>
+
+                        <span class="order-status new">
+                            NEW ORDER
+                        </span>
+
+                    </div>
+
+
+                    <div class="order-meta">
+
+                        <span>
+                            🪑 Table 03
+                        </span>
+
+                        <span>•</span>
+
+                        <span class="order-time">
+                            5 min ago
+                        </span>
+
+                    </div>
+
+
+                    <div class="order-divider"></div>
+
+
+                    <div class="order-items">
+
+                        <div class="order-item">
+                            <div class="item-left">
+                                <span class="quantity">1×</span>
+                                <span>Crispy Chicken</span>
+                            </div>
+
+                            <strong>$5.90</strong>
+                        </div>
+
+
+                        <div class="order-item">
+                            <div class="item-left">
+                                <span class="quantity">2×</span>
+                                <span>Iced Coffee</span>
+                            </div>
+
+                            <strong>$5.00</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="order-divider"></div>
+
+
+                    <div class="order-bottom">
+
+                        <div>
+                            <span>Total</span>
+                            <strong>$10.90</strong>
+                        </div>
+
+                        <button
+                            class="order-action accept-btn"
+                            onclick="acceptOrder(this)"
+                        >
+                            Accept Order
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ORDER 3 -->
+                <article class="order-card preparing-order">
+
+                    <div class="order-top">
+
+                        <div>
+                            <span class="order-label">ORDER</span>
+                            <h4>#SS-2741</h4>
+                        </div>
+
+                        <span class="order-status preparing">
+                            PREPARING
+                        </span>
+
+                    </div>
+
+
+                    <div class="order-meta">
+
+                        <span>
+                            🪑 Table 08
+                        </span>
+
+                        <span>•</span>
+
+                        <span class="order-time">
+                            8 min ago
+                        </span>
+
+                    </div>
+
+
+                    <div class="order-divider"></div>
+
+
+                    <div class="order-items">
+
+                        <div class="order-item">
+                            <div class="item-left">
+                                <span class="quantity">1×</span>
+                                <span>Hot Pot Saly</span>
+                            </div>
+
+                            <strong>$2.50</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="order-divider"></div>
+
+
+                    <div class="order-bottom">
+
+                        <div>
+                            <span>Total</span>
+                            <strong>$2.50</strong>
+                        </div>
+
+                        <button
+                            class="order-action ready-btn"
+                            onclick="markReady(this)"
+                        >
+                            Mark as Ready
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ORDER 4 -->
+                <article class="order-card ready-order">
+
+                    <div class="order-top">
+
+                        <div>
+                            <span class="order-label">ORDER</span>
+                            <h4>#SS-1987</h4>
+                        </div>
+
+                        <span class="order-status ready">
+                            READY
+                        </span>
+
+                    </div>
+
+
+                    <div class="order-meta">
+
+                        <span>
+                            🪑 Table 02
+                        </span>
+
+                        <span>•</span>
+
+                        <span class="order-time">
+                            12 min ago
+                        </span>
+
+                    </div>
+
+
+                    <div class="order-divider"></div>
+
+
+                    <div class="order-items">
+
+                        <div class="order-item">
+                            <div class="item-left">
+                                <span class="quantity">1×</span>
+                                <span>Bok Ngeav</span>
+                            </div>
+
+                            <strong>$2.50</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="order-divider"></div>
+
+
+                    <div class="order-bottom">
+
+                        <div>
+                            <span>Total</span>
+                            <strong>$2.50</strong>
+                        </div>
+
+                        <button
+                            class="order-action done-btn"
+                            disabled
+                        >
+                            ✓ Completed
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/kitchen.js"></script>
+
+</body>
+</html>

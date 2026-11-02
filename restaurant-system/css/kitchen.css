@@ -1,0 +1,714 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+
+/* ==============================
+   RESET
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #f6f6f3;
+    color: #171717;
+    min-height: 100vh;
+}
+
+
+/* ==============================
+   HEADER
+============================== */
+
+.kitchen-header {
+    height: 76px;
+    background: #171717;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 42px;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.brand-icon {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 12px;
+
+    background: #ff6b35;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.brand h1 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 17px;
+    line-height: 1.1;
+}
+
+.brand span {
+    color: #9d9d9d;
+    font-size: 11px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.online-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #d9d9d9;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.online-dot {
+    width: 8px;
+    height: 8px;
+
+    background: #49d17d;
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 4px rgba(73, 209, 125, 0.12);
+}
+
+.current-time {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* ==============================
+   MAIN
+============================== */
+
+.kitchen-container {
+    width: min(1400px, calc(100% - 64px));
+    margin: auto;
+    padding: 42px 0 70px;
+}
+
+
+/* ==============================
+   PAGE HEADING
+============================== */
+
+.page-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.eyebrow {
+    color: #ff6b35;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    margin-bottom: 8px;
+}
+
+.page-heading h2 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 36px;
+    letter-spacing: -1.3px;
+}
+
+.heading-description {
+    margin-top: 8px;
+
+    color: #888;
+    font-size: 14px;
+}
+
+.live-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 14px;
+
+    background: white;
+    border: 1px solid #e8e8e5;
+    border-radius: 12px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.live-indicator span {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+    background: #49d17d;
+}
+
+
+/* ==============================
+   STATS
+============================== */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+
+    margin-bottom: 42px;
+}
+
+.stat-card {
+    min-height: 125px;
+
+    background: white;
+
+    border: 1px solid #e9e9e6;
+    border-radius: 20px;
+
+    padding: 22px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    transition: 0.25s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.06);
+}
+
+.stat-icon {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+}
+
+.new-stat .stat-icon {
+    background: #fff0ea;
+}
+
+.preparing-stat .stat-icon {
+    background: #fff6df;
+}
+
+.ready-stat .stat-icon {
+    background: #eaf9ef;
+}
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    flex: 1;
+}
+
+.stat-content span {
+    color: #888;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.stat-content strong {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 30px;
+    line-height: 1;
+}
+
+.stat-arrow {
+    color: #bbb;
+    font-size: 20px;
+}
+
+
+/* ==============================
+   ORDERS SECTION
+============================== */
+
+.orders-section {
+    margin-top: 10px;
+}
+
+.orders-top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    margin-bottom: 22px;
+}
+
+.orders-top h3 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 23px;
+}
+
+.orders-top p {
+    margin-top: 5px;
+    color: #999;
+    font-size: 13px;
+}
+
+
+/* ==============================
+   FILTERS
+============================== */
+
+.filter-buttons {
+    display: flex;
+    gap: 7px;
+
+    background: #ececea;
+    padding: 5px;
+
+    border-radius: 12px;
+}
+
+.filter-btn {
+    border: none;
+    background: transparent;
+
+    padding: 9px 14px;
+
+    border-radius: 8px;
+
+    color: #777;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.filter-btn:hover {
+    color: #171717;
+}
+
+.filter-btn.active {
+    background: #171717;
+    color: white;
+}
+
+
+/* ==============================
+   ORDER GRID
+============================== */
+
+.orders-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+
+/* ==============================
+   ORDER CARD
+============================== */
+
+.order-card {
+    background: white;
+
+    border: 1px solid #e8e8e5;
+    border-radius: 20px;
+
+    padding: 23px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border 0.25s ease;
+}
+
+.order-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+}
+
+
+/* NEW ORDER */
+
+.order-card.new-order {
+    border-color: #ffd4c4;
+}
+
+
+/* ==============================
+   ORDER TOP
+============================== */
+
+.order-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.order-label {
+    color: #aaa;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+}
+
+.order-top h4 {
+    margin-top: 4px;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 20px;
+}
+
+
+/* ==============================
+   STATUS
+============================== */
+
+.order-status {
+    padding: 7px 10px;
+
+    border-radius: 8px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.6px;
+
+    white-space: nowrap;
+}
+
+.order-status.new {
+    background: #fff0ea;
+    color: #ed5a2c;
+}
+
+.order-status.preparing {
+    background: #fff5dc;
+    color: #bd7b00;
+}
+
+.order-status.ready {
+    background: #e8f8ed;
+    color: #299554;
+}
+
+
+/* ==============================
+   META
+============================== */
+
+.order-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 9px;
+
+    color: #929292;
+
+    font-size: 12px;
+}
+
+
+/* ==============================
+   DIVIDER
+============================== */
+
+.order-divider {
+    height: 1px;
+    background: #eeeeeb;
+
+    margin: 19px 0;
+}
+
+
+/* ==============================
+   ITEMS
+============================== */
+
+.order-items {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 14px;
+}
+
+.item-left {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    color: #343434;
+}
+
+.quantity {
+    min-width: 28px;
+
+    color: #ff6b35;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.order-item strong {
+    font-size: 13px;
+    color: #666;
+}
+
+
+/* ==============================
+   ORDER BOTTOM
+============================== */
+
+.order-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.order-bottom > div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.order-bottom > div span {
+    color: #999;
+    font-size: 11px;
+}
+
+.order-bottom > div strong {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 20px;
+}
+
+
+/* ==============================
+   BUTTONS
+============================== */
+
+.order-action {
+    min-width: 150px;
+
+    border: none;
+    border-radius: 11px;
+
+    padding: 12px 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.order-action:hover {
+    transform: translateY(-1px);
+}
+
+.order-action span {
+    font-size: 16px;
+}
+
+.accept-btn {
+    background: #171717;
+    color: white;
+}
+
+.accept-btn:hover {
+    background: #ff6b35;
+}
+
+.ready-btn {
+    background: #ff6b35;
+    color: white;
+}
+
+.ready-btn:hover {
+    background: #e95827;
+}
+
+.done-btn {
+    background: #edf7ef;
+    color: #299554;
+
+    cursor: default;
+}
+
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 1000px) {
+
+    .kitchen-header {
+        padding: 0 25px;
+    }
+
+    .kitchen-container {
+        width: min(100% - 40px, 900px);
+    }
+
+    .orders-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .kitchen-header {
+        height: auto;
+        padding: 16px 20px;
+
+        align-items: flex-start;
+    }
+
+    .header-right {
+        gap: 10px;
+    }
+
+    .online-status {
+        display: none;
+    }
+
+    .kitchen-container {
+        width: calc(100% - 28px);
+        padding-top: 28px;
+    }
+
+    .page-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .page-heading h2 {
+        font-size: 30px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .stat-card {
+        min-height: 100px;
+    }
+
+    .orders-top {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 17px;
+    }
+
+    .filter-buttons {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .filter-btn {
+        white-space: nowrap;
+    }
+
+    .orders-grid {
+        gap: 14px;
+    }
+
+    .order-card {
+        padding: 18px;
+        border-radius: 17px;
+    }
+
+    .order-bottom {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .order-action {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 430px) {
+
+    .brand h1 {
+        font-size: 15px;
+    }
+
+    .brand span {
+        font-size: 10px;
+    }
+
+    .current-time {
+        font-size: 14px;
+    }
+
+    .order-top h4 {
+        font-size: 18px;
+    }
+
+    .order-status {
+        font-size: 9px;
+    }
+}
